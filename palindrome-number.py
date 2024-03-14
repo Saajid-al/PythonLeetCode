@@ -8,10 +8,12 @@ class Solution(object):
         y = str(x)
         x = str(x)
         y = y[::-1]
-        print(x)
-        print(y)
         if y == x:
             return True
         else:
             return False
+#TEST
+s = Solution()
+print(s.isPalindrome(121))
+
         
