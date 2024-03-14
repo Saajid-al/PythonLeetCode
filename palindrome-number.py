@@ -5,13 +5,7 @@ class Solution(object):
         :rtype: bool
         
         """
-        y = str(x)
-        x = str(x)
-        y = y[::-1]
-        if y == x:
-            return True
-        else:
-            return False
+        return str(x) == str(x)[::-1]
 #TEST
 s = Solution()
 print(s.isPalindrome(121))
