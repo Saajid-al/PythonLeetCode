@@ -7,8 +7,8 @@ class Solution(object):
         """
         maxCandy = max(candies)
         candyList = list()
-        for i in range(candies):
-            if(candies[i] + extraCandies >= candies):
+        for i in range(len(candies)):
+            if(candies[i] + extraCandies >= maxCandy):
                 candyList.append(True)
             else:
                 candyList.append(False)
@@ -19,4 +19,4 @@ class Solution(object):
 
         
 s = Solution()
-print(s.kidsWithCandies("2,3,5,1,3",3))
+print(s.kidsWithCandies([2,3,5,1,3],3))
