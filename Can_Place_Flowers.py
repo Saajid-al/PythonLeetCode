@@ -6,22 +6,16 @@ class Solution(object):
         :rtype: bool
         """
         print (n)
-        #keep a previous holder
         previous = 0
         potentialSpot = 0
-        for idx, i  in enumerate(flowerbed[:len(flowerbed)-1]):
-            print("Previous Num : " , previous)
-            nextElem = flowerbed[idx + 1]
+        for idx, i  in enumerate(flowerbed[:len(flowerbed)-1]): #Loop through index, slicing last index (acts as flowerbed-1)
+            nextElem = flowerbed[idx + 1] #getting the next element
             if i == 0 and nextElem == 0 and previous == 0:
-                print("SUCCESS")
-                potentialSpot = potentialSpot + 1
+                potentialSpot = potentialSpot + 1 #the potential spot 
                 previous = i
-                if(potentialSpot) == n:
+                if(potentialSpot) == n: #if condition is met
                     return True
             previous = i
-            print("Current Index" , idx)
-            print("Next Index", nextElem)
-            print("____NEXT____")
         return False
 
                 
