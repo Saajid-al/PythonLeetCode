@@ -5,19 +5,14 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        print (n)
-        previous = 0
-        potentialSpot = 0
-        for idx, i  in enumerate(flowerbed[:len(flowerbed)-1]): #Loop through index, slicing last index (acts as flowerbed-1)
-            nextElem = flowerbed[idx + 1] #getting the next element
-            if i == 0 and nextElem == 0 and previous == 0:
-                potentialSpot = potentialSpot + 1 #the potential spot 
-                previous = i
-                if(potentialSpot) == n: #if condition is met
-                    return True
-            previous = i
-        return False
-
+        f = [0] + flowerbed + [0]
+        for i in range(1, len(f) - 1):
+            if f[i-1] == 0 and f[i] == 0 and f[i+1] == 0: #create a new array to index from and just check
+                f[i] = 1 #change the actual array
+                n -= 1
+        return n<=0
+        
+        
                 
 
 
@@ -33,4 +28,4 @@ class Solution(object):
                 
 
 s = Solution()
-print(s.canPlaceFlowers([1,0,0,0,1], 1))
+print(s.canPlaceFlowers([1,0,0,0,0,1], 2))
