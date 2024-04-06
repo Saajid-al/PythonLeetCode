@@ -8,7 +8,7 @@ class Solution(object):
         newNums = {}
         
         for idx, x in enumerate(nums):
-            if abs(target-x) in newNums:
+            if target-x in newNums:
                 return[newNums[target-x], idx]
             newNums[x] = idx
 
