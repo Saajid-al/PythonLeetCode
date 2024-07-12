@@ -4,15 +4,17 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        maxProfit = 0
-        x = 0
-        for k,v  in enumerate(prices):
-            if((max(prices[x:]) - (prices[k])) > maxProfit):
-                maxProfit = max(prices[x:]) - (prices[k])
-            x+=1
-        return maxProfit
 
-
-        #[2,0,5,1,10,9]
+        min_price = float('inf')
+        max_profit = 0
+        
+        for price in prices:
+            if price < min_price:
+                min_price = price
+            elif price - min_price > max_profit:
+                max_profit = price - min_price
+        
+        return max_profit
+    
 s = Solution()
 print(s.maxProfit([7,1,5,3,6,4]))
