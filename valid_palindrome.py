@@ -4,7 +4,9 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        
-
+        s = s.lower()
+        print(s)
+        for idx, x in enumerate(s):
+            print(s[x])
 s = Solution()
 s.isPalindrome("A man, a plan, a canal: Panama")
