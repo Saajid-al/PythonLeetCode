@@ -5,7 +5,17 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        print("hello")
+        if(len(s) != len(t)):
+            return False
+        #aacc
+        #ccc
+        
+        for x in t:
+            if x not in s:
+                return False
+            s = s.replace(x,'',1)
+            print(s)
+        return True
         
 s = Solution()
-s.isAnagram("anagram","nagaram")
+print(s.isAnagram("aacc","ccac"))
