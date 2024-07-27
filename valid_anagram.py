@@ -9,12 +9,12 @@ class Solution(object):
             return False
         #aacc
         #ccc
-        
-        for x in t:
-            if x not in s:
+        s_, t_ = set(s), set(t)
+        if s_!=t_:    
+            return False
+        for l in s_:
+            if s.count(l)!= t.count(l):
                 return False
-            s = s.replace(x,'',1)
-            print(s)
         return True
         
 s = Solution()
