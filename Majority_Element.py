@@ -5,12 +5,14 @@ class Solution(object):
         :rtype: int
         """
         count = 0
-        oldCount = 0
+        num = 0
         for x in nums:
-            count = nums.count(x)
-            if count > oldCount:
-                count = oldCount
-        return count
+            if x == num:
+                continue
+            if nums.count(x) > count:
+                count = nums.count(x)    
+                num = x    
+        return num
     
 s = Solution()
-s.majorityElement(3,[3,2,3])
+print(s.majorityElement([3,2,3]))
