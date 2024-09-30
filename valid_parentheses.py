@@ -8,16 +8,17 @@ class Solution(object):
         hashmap = { ')':'(', '}':'{', ']':'['}
 
         for c in s:
-            if c in hashmap:
-                popped = stack.pop()
-                if popped != hashmap[c]:
-                    return False
-            else:
+            if c not in hashmap:
                 stack.append(c)
-        if stack.isEmpty():
-            return True
-        else:
-            return False
+            else:
+                if not stack:
+                    return False
+                else:
+                    popped = stack.pop()
+                    if popped!= hashmap[c]:
+                        return False
+        return not stack
+
 
 
 
