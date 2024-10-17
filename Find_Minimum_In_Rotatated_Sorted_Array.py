@@ -4,7 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-
         l = 0
         r = len(nums) -1
 
@@ -23,6 +22,6 @@ class Solution(object):
             else:
                 r = m-1 
         return res
-
+    
 s = Solution()
-print(s.findMin([3,4,5,1,2]))
+print(s.findMin([3, 4, 5, 1, 2]))
