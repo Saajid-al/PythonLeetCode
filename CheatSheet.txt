@@ -1,0 +1,1 @@
+For binary searches, anytime we're looking at a o(Log n) Solution, usually we are looking at a binary search Solution
