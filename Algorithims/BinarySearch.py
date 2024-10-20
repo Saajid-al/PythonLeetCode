@@ -5,7 +5,7 @@ class dataStructure(object):
 
         while(left<=right): 
             mid = (right+left)//2 #getting the middle of the array
-            print("mid" , mid, "Val", array[mid], "left :" , left)
+            print("mid" , mid, "Val", array[mid], "left :" , left, "right : ", right, "right-val", array[right])
             if(array[mid] == target):
                 return mid
             elif array[mid] < target:
