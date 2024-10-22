@@ -11,7 +11,7 @@ class Solution(object):
 
         for i in s:
             if i in map:
-                if stack[-1] == map[c]:
+                if stack and stack[-1] == map[c]:
                     stack.pop
                 else:
                     return False
