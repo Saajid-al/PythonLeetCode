@@ -10,6 +10,8 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: int
         """
+
+        #recursive DFS
         if not root:
             return 0 
         

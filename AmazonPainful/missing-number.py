@@ -8,10 +8,6 @@ class Solution(object):
         :rtype: int
         """
         c = Counter(nums)
-        N = len(nums)
-        for i in range(N+1): #inclusive
-            if i not in c:
-                return i
-        
+        print(c)
 s = Solution()
 print(s.missingNumber([3,0,1])) 
